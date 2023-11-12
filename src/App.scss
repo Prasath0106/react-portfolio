@@ -1,0 +1,247 @@
+@import '~bootstrap/scss/bootstrap';
+
+.header-menu{
+ 
+  background-color: #12222c;
+  a{
+    color: #bbdbdb !important;
+    cursor: pointer;
+  }
+}
+
+body{
+  overflow-y: hidden;
+}
+
+.content-section{
+  .banner-details{
+    h2{
+      position: relative;
+      &::after {
+        content: "";
+        height: 2px;
+        width: 100px;
+        position: absolute;
+        background-color: #bbdbdb !important;
+        bottom: -6px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    }
+  }
+}
+
+
+.paddingTop{
+  padding-top: 60px;
+}
+
+.paddingBottom{
+  padding-bottom: 60px;
+}
+
+.about-me{
+  .my-photo{
+    img{
+      width: 200px;
+    }
+  }
+}
+
+.title-sec{
+  margin-bottom: 25px;
+}
+
+
+.title-underline{
+  position: relative;
+  &::after {
+    content: "";
+    height: 2px;
+    width: 100px;
+    position: absolute;
+    background-color: #bbdbdb !important;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+}
+
+
+.banner{
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 260px;
+  background-size: contain;
+  border-radius: 10px 10px 0px 0px;
+  transform: scale(1.0);
+  transition: transform .35s ease-in-out;
+  &:hover{
+    transform: scale(1.2);
+    transition: all .35s ease-in-out;
+  }
+  &.html{
+    background-image: url(./assets/images/html.jpg);
+  }
+  &.css{
+    background-image: url(./assets/images/css.jpg);
+  }
+  &.front-end{
+    background-image: url(./assets/images/Front-end-development.jpg);
+  }
+  &.reactjs{
+    background-image: url(./assets/images/reactjs.jpg);
+  }
+}
+
+.education-details{
+  .college-data{
+    width: max-content;
+  }
+  .college img, .school img {
+    width: 200px;
+    height: 125px;
+    object-fit: contain;
+  } 
+}
+
+.skills-item{
+  img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+}
+
+.footer-section{
+  .myphoto{
+   img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+   }
+  }
+}
+
+.address-sec{
+
+  p{
+    margin: 0 auto;
+    width: max-content;
+  }
+}
+
+.carousel-item img {
+  object-fit: contain;
+  width: 100%;
+}
+
+
+.html-parent{
+  .html-slider{
+    display: block !important;
+  }
+}
+
+.css-parent{
+  .css-slider{
+    display: block !important;
+  }
+}
+
+.js-parent{
+  .js-slider{
+    display: block !important;
+  }
+}
+
+
+.bootstrap-parent{
+  .bootstrap-slider{
+    display: block !important;
+  }
+}
+
+.react-parent{
+  .react-slider{
+    display: block !important;
+  }
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.header-menu a:hover {
+  background-color: #bbdbdb !important;
+  color: #12222c !important;
+  transition: all .35s ease-in-out;
+}
+
+.skills-item{
+  > div{
+    --mdb-image-hover-zoom-transition: all 0.3s linear;
+    --mdb-image-hover-zoom-transform: scale(1.1);
+    &:hover img{
+      transform: var(--mdb-image-hover-zoom-transform);
+      transition: all .35s ease-in-out; 
+    }
+  }
+}
+
+.footer-sec li img {
+  transform: scale(1.0);
+  transition: all .35s ease-in-out; 
+  &:hover{
+    transform: scale(1.2);
+    transition: all .35s ease-in-out; 
+  }
+}
+
+.banner-details, .about-me, .bg-color, .footer-section{
+  background-color: #bbdbdb !important;
+}
+
+
+@media (max-width:767px){
+  .banner{
+    height: 150px;
+  }
+
+  .certificationSec{
+    height: auto !important;
+  }
+  .footer-section{
+    .footer-sec{
+      flex-flow: column;
+      justify-content: center;
+      > div{
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .education-details .college img, .education-details .school img{
+    text-align: center;
+  }
+  .college > div {
+    text-align: center;
+    padding: 0;
+    justify-content: center !important;
+}
+.school{
+  text-align: center;
+}
+}
+
+
+@media (min-width:1200px){
+  .education-details{
+    .college, .school{
+      max-width: 980px;
+      margin: 0 auto;
+    }
+  }
+}
